@@ -1,0 +1,111 @@
+html {
+    overflow: hidden;
+}
+
+p {
+    font-size: 16px;
+}
+
+.info {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    background-color: #2A50A3;
+    color: #EAEAEA;
+    margin: 0;
+    border: solid #2A50A3;
+    font-size: 20px;
+}
+
+.user-form {
+    cursor: pointer;
+    text-align: center;
+    background-color: #2A50A3;
+    height: auto;
+}
+
+.input-group {
+    display: inline;
+    position: absolute;
+    top: 0;
+    left: 50vh;
+}
+
+.card--content, #loadingIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #333;
+}
+
+.card {
+    background: #333;
+    font-family: Verdana;
+}
+
+.border-primary {
+    color: #2A50A3 !important;
+}
+
+.card-body {
+    background: #333;
+}
+
+.modal-header {
+    background-color: #2A50A3 !important;
+}
+
+.modal-title {
+    color: #EAEAEA !important;
+}
+
+.modal-body {
+    background-color: #333 !important;
+    color: #EAEAEA !important;
+    font-family: Verdana;
+    font-size: 1rem !important;
+}
+
+.inline-errors {    
+    text-align: left;
+    list-style: none;
+    display: flex;
+    position: absolute;
+    left: 35vw;
+}
+
+.inline-errors.error {
+    color: #b80000;
+    display: block;
+    background-color: #333;
+}
+
+.inline-errors li.error {
+    color: #b80000;
+    background-color: #333;
+}
+
+#result-error {
+    text-align: left;
+    padding: 0.625rem;
+    margin: 0.625rem 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#synopsisModal {
+    background-color: #2A50A3;
+    height: 30px;
+    padding: 0 5px 0 5px;
+}
+
+#loadingIcon {
+    visibility: hidden;
+}
+
+
+
+
+
+
+
