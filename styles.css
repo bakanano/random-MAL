@@ -9,7 +9,6 @@ p {
 .info {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
-    background-color: #2A50A3;
     color: #EAEAEA;
     margin: 0;
     border: solid #2A50A3;
@@ -19,7 +18,6 @@ p {
 .user-form {
     cursor: pointer;
     text-align: center;
-    background-color: #2A50A3;
     height: auto;
 }
 
@@ -94,13 +92,16 @@ p {
 }
 
 #synopsisModal {
-    background-color: #2A50A3;
     height: 30px;
     padding: 0 5px 0 5px;
 }
 
 #loadingIcon {
     visibility: hidden;
+}
+
+#moreInfo, #synopsisModal, .user-form, .info {
+    background-color: #2A50A3;
 }
 
 

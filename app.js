@@ -25,12 +25,27 @@ $(".user-form").submit(event => {
     requestUser(status, userName);
 });
 
+/**
+ * 
+ *
+ * Description: Delays execution of a function for a fixed amount of time e.g 4 milliseconds -> 4 seconds
+ *
+ *
+ **/
 function sleep(ms) {
     return new Promise((resolve) => {
         setTimeout(resolve, ms);
     });
 }
 
+/**
+ * 
+ *
+ * Description: Requests for a MyAnimeList user entered in form input, displays error if the user does not exist or their
+ * list is set to private. Data sent to getListStats() function
+ *
+ *
+ **/
 async function requestUser(status, userName) {
     const userEndpoint = `https://api.jikan.moe/v3/user/${userName}`;
     if (userName === "" || status === null || format === null) {
@@ -53,6 +68,14 @@ async function requestUser(status, userName) {
     }
 }
 
+/**
+ * 
+ *
+ * Description: This function gets user's entries based on their List status selection and this data is sent to 
+ * requestListType() function for manipulation.
+ *
+ *
+ **/
 async function getListStats(data, status) {
     if (userName.charAt(0) !== (data.username).charAt(0)) {
         userName = (data.username).charAt(0) + userName.substring(1,);
@@ -69,6 +92,14 @@ async function getListStats(data, status) {
     }
 }
 
+/**
+ * 
+ *
+ * Description: Fetches endpoint of user's anime list based on their status and is spread into a new array for easy
+ * array manipulation. 
+ *
+ *
+ **/
 async function requestListType(userName, entries, status) {
     status = status.toLowerCase().replace(/-|\s/g, "");
     pageNum = Math.ceil(entries / 300);
@@ -88,6 +119,14 @@ async function requestListType(userName, entries, status) {
     sleep(4000);
 }
 
+/**
+ * 
+ *
+ * Description: Filters the array entries based on format and score selection. The processed array is 
+ * passed to displayAnimeContent() function
+ *
+ *
+ **/
 async function filterBy(animeEntries, format, userScore) {
     if ((format === "All") && (userScore !== null)) {
         const filteredAnime = animeEntries.filter(anime => (anime.score === parseInt(userScore)) ? true : false)
@@ -107,6 +146,13 @@ async function filterBy(animeEntries, format, userScore) {
     }
 }
 
+/**
+ * 
+ *
+ * Description: Anime page request endpoint
+ *
+ *
+ **/
 async function requestAnime(id) {
     const animeEndpoint = `https://api.jikan.moe/v3/anime/${id}`;
     fetch(animeEndpoint)
@@ -114,7 +160,6 @@ async function requestAnime(id) {
         return response.json();
     })
     .then((data) => {
-        
         const animeScore = data.score;
         $("#animeType").after(
             `
@@ -162,6 +207,14 @@ async function requestAnime(id) {
     });
 }
 
+/**
+ * 
+ *
+ * Description: Displays a card view of a randomly selected anime in the filtered array with information
+ * the random anime entry.
+ *
+ *
+ **/
 async function displayAnimeContent(animeArray) {
     const randomNumber = Math.floor(Math.random() * animeArray.length);
     let itemContent = "";
