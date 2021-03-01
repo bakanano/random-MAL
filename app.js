@@ -50,19 +50,27 @@ async function requestUser(status, userName) {
     const userEndpoint = `https://api.jikan.moe/v3/user/${userName}`;
     if (userName === "" || status === null || format === null) {
         $("#result-no-input").show();
+        setTimeout(function() {
+            $("#result-no-input").hide(); 
+        }, 5000);
+        $("div #loadingIcon").css("visibility", "hidden");
     } else {
-        $("#result-no-input").hide();
         const response = await fetch(userEndpoint);
         const data = await response.json();
-        if (data["status"] == "404") {
+        if (data["status"] == 404) {
             $("#result-user-exist").show();
+            setTimeout(function() {
+                $("#result-user-exist").hide(); 
+            }, 5000);
+            $("div #loadingIcon").css("visibility", "hidden");
         }
-        if (data["status"] == "400") {
+        else if (data["status"] == 400) {
             $("#result-list-private").show();
+            setTimeout(function() {
+                $("#result-user-private").hide(); 
+            }, 5000);  
         } 
         else {
-            $("#result-user-exist").hide();
-            $("#result-list-private").hide();
             getListStats(data, status);
         }
     }
@@ -220,14 +228,18 @@ async function displayAnimeContent(animeArray) {
     let itemContent = "";
 
     if (animeArray.length === 0 && userScore === null) {
-        $("#result-list-no-entries > span").text(`Sorry, there are no anime entries found in ${userName}'s ${status} list! Please try again!`);
+        $("#result-list-no-entries > span").text(`No ${format} anime entries in ${status} list!`);
         $("#result-list-no-entries").show();
-        
+        setTimeout(function() {
+            $("#result-list-no-entries").hide(); 
+        }, 5000);
     } else if (animeArray.length === 0 && userScore !== null) {
-        $("#result-list-no-entries > span").text(`Sorry, there are no anime entries with a score of ${userScore} found in ${userName}'s ${status} list! Please try again!`);
+        $("#result-list-no-entries > span").text(`No anime entries with score ${userScore} in ${status} list!`);
         $("#result-list-no-entries").show();
-    } else {
-        $("#result-list-no-entries").hide();
+        setTimeout(function() {
+            $("#result-list-no-entries").hide(); 
+        }, 5000);
+        
     }
 
     const addContent = async (anime, index) => {
