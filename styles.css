@@ -82,7 +82,6 @@ p {
     margin-top: 0;
 }
 
-
 #synopsisModal {
     height: 30px;
     padding: 0 5px 0 5px;
@@ -92,9 +91,15 @@ p {
     visibility: hidden;
 }
 
+#info-red {
+    color: red;
+}
+
 #moreInfo, #synopsisModal, .user-form, .info {
     background-color: #2A50A3;
 }
+
+
 
 
 
