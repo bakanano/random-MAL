@@ -1,0 +1,109 @@
+html {
+    overflow: hidden;
+}
+
+p {
+    font-size: 16px;
+}
+
+.info {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: #EAEAEA;
+    margin: 0;
+    border: solid #2A50A3;
+    font-size: 20px;
+}
+
+.user-form {
+    cursor: pointer;
+    text-align: center;
+    height: auto;
+}
+
+.input-group {
+    display: inline;
+    position: absolute;
+    top: 0;
+    left: 50vh;
+}
+
+.card--content, #loadingIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #333;
+}
+
+.card {
+    background: #333;
+    font-family: Verdana;
+}
+
+.border-primary {
+    color: #2A50A3 !important;
+}
+
+.card-body {
+    background: #333;
+}
+
+.modal-header {
+    background-color: #2A50A3 !important;
+}
+
+.modal-title {
+    color: #EAEAEA !important;
+}
+
+.modal-body {
+    background-color: #333 !important;
+    color: #EAEAEA !important;
+    font-family: Verdana;
+    font-size: 1rem !important;
+}
+
+.inline-errors {    
+    list-style: none;
+    display: flex;
+    position: absolute;
+    left: 0;
+    color:#EAEAEA;
+    display: block;
+    text-align: center;
+}
+
+.error {
+    background-color: #fc2717;
+    border-style: none;
+    border-radius: 3px;
+    padding: 30px;
+    margin-top: 0;
+}
+
+#synopsisModal {
+    height: 30px;
+    padding: 0 5px 0 5px;
+}
+
+#loadingIcon {
+    visibility: hidden;
+}
+
+#info-red {
+    color: red;
+}
+
+#moreInfo, #synopsisModal, .user-form, .info {
+    background-color: #2A50A3;
+}
+
+
+
+
+
+
+
+
+
