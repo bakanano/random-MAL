@@ -6,6 +6,34 @@ p {
     font-size: 16px;
 }
 
+.title-div {
+    background-color: #2A50A3;
+    color: #EAEAEA;
+    font-size: 3.3rem;
+}
+
+.title {
+    color: inherit;
+    position: absolute;
+    top: 20px;
+}
+
+.title:hover {
+    color: #EAEAEA;
+}
+
+.title, .title:visited, .title:hover, .title:active {
+    text-decoration: none;
+}
+
+.title:hover > span.o {
+    display: none;
+}
+
+.emoji {
+    font-size: 3rem;
+}
+
 .info {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
@@ -16,7 +44,6 @@ p {
 }
 
 .user-form {
-    cursor: pointer;
     text-align: center;
     height: auto;
 }
@@ -41,20 +68,12 @@ p {
     font-family: Verdana;
 }
 
-.border-primary {
+.border-primary, .modal-header, .modal-title {
     color: #2A50A3 !important;
 }
 
 .card-body {
     background: #333;
-}
-
-.modal-header {
-    background-color: #2A50A3 !important;
-}
-
-.modal-title {
-    color: #EAEAEA !important;
 }
 
 .modal-body {
