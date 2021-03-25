@@ -1,4 +1,4 @@
-# Random-List-Anime-Generator
+# RandomAni.moe - https://randomani.moe/
 
 # Only works with accounts set to public!
 
