@@ -1,6 +1,4 @@
-# RandomAni.moe - https://randomani.moe/
-
-# Only works with accounts set to public!
+# https://randomani.moe/ - Only works with MyAnimeList accounts set to public!
 
 # Work In Progress:
 * Website responsiveness
