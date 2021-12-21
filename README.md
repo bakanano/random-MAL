@@ -1,5 +1,3 @@
-# https://randomani.moe/ - Only works with MyAnimeList accounts set to public!
-
 # Work In Progress:
 * Website responsiveness
 
