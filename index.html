@@ -6,13 +6,13 @@
     <link rel="icon" href="assets/images/dices.svg">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <title>RandomAni.moe</title>
+    <title>RandomAnime</title>
 </head>
 <body>
   
   <div class="title-div">
     <a class ="title" href="/">
-      <span class="emoji">🎲</span>RandomAni.m<span class="o">o</span>e
+      <span class="emoji">🎲</span>Random Anime
     </a>
   </div>
   
@@ -58,7 +58,7 @@
             <div class="dropdown" id="filterScore">
               <button aria-expanded="false"
               aria-haspopup="true" class="btn btn-lg btn-light dropdown-toggle border" id="scoreButton" data-toggle="dropdown" type="button">
-              Score
+              Score (optional)
               </button>
               <div class="dropdown-menu" id="scoreMenu">
                 <a class="dropdown-item">0</a>
@@ -95,6 +95,10 @@
 
     <div id="result-list-no-entries" class="result-content" style="display: none;">
       <span class="inline-errors error" style="font-size: 16px;"></span>
+    </div>
+    
+    <div id="result list-error" class="result-content" style="display: none;">
+      <span class="inline-errors error" style="font-size: 18px;">Error 503, something is not working on MyAnimeList's end. Please try again later</span>
     </div>
 
     <div class="card--content">
