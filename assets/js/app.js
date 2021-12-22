@@ -61,14 +61,20 @@ async function requestUser(status, userName) {
             $("#result-user-exist").show();
             setTimeout(function() {
                 $("#result-user-exist").hide(); 
-            }, 5000);
+            }, 3000);
             $("div #loadingIcon").css("visibility", "hidden");
         }
         else if (data["status"] == 400) {
             $("#result-list-private").show();
             setTimeout(function() {
                 $("#result-user-private").hide(); 
-            }, 5000);  
+            }, 3000);  
+        }
+        else if (data["status"] == 503) {
+            $("#result-list-error").show();
+            setTimeout(function() {
+                $("#result-user-private").hide(); 
+            }, 3000);  
         } 
         else {
             getListStats(data, status);
@@ -120,7 +126,7 @@ async function requestListType(userName, entries, status) {
         const response = await fetch(listTypeEndpoint);
         data = await response.json();
         console.log(`Requesting ${userName}'s ${status} list - page ${page} out of ${page}`);
-        animeEntries.push(...data["anime"]);
+        Array.prototype.push.apply(animeEntries, data["anime"]);
     }
     console.log(`Finished requesting ${userName}'s ${status} list!`);
     filterBy(animeEntries, format, userScore);
@@ -201,7 +207,7 @@ async function requestAnime(id) {
                                 <h5 class="modal-title" id="infoModal">
                                     <b>${animeTitle}</b>
                                     </div>
-                                    <i>${animeTitleJP}</i>
+                                    <i>Native title: ${animeTitleJP}</i>
                                 </h5>
                             </div>
                                 <div class="modal-body">
