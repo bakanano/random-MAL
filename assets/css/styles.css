@@ -1,9 +1,15 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 html {
     overflow: hidden;
 }
 
 p {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .title-div {
@@ -86,9 +92,11 @@ p {
 .inline-errors {    
     list-style: none;
     display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     left: 0;
-    color:#EAEAEA;
+    color:#FBFBFB;
     display: block;
     text-align: center;
 }
@@ -96,8 +104,8 @@ p {
 .error {
     background-color: #fc2717;
     border-style: none;
-    border-radius: 3px;
-    padding: 30px;
+    border-radius: 5px;
+    padding: 20px;
     margin-top: 0;
 }
 
@@ -110,14 +118,24 @@ p {
     visibility: hidden;
 }
 
-#info-red {
-    color: red;
+#info-red, .required {
+    color: #fc2717;
 }
 
 #moreInfo, #synopsisModal, .user-form, .info {
     background-color: #2A50A3;
 }
 
+/* MEDIA QUERIES */
+
+@media(max-width: 500px) {
+    .title-div, .info {
+        display: none;
+    }
+
+    .user-form { 
+    }
+}
 
 
 
