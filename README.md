@@ -7,4 +7,6 @@
 * Choose a format from the format dropdown
 * Select a score to filter your results from (**optional**)
 
+# Link
+* https://bakanano.github.io/random-MAL/
 
