@@ -1,3 +1,7 @@
+# UPDATE 2022.05.21
+
+* [User list endpoints have been removed from the API as of 2022.05.01.](https://docs.google.com/document/d/1-6H-agSnqa8Mfmw802UYfGQrceIEnAaEh4uCXAPiX5A/edit#)
+
 # What is this?
 * A website where you can a your MyAnimeList username, filter by list type and it will return to you a random anime from the list.
 
