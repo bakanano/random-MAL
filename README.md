@@ -11,12 +11,5 @@
 * Choose a format from the format dropdown (i.e TV)
 * Select a score to filter your results from (**optional**) (i.e 10)
 
-# Link
-* https://bakanano.github.io/random-MAL/
-
-
-
-
-Video:
 https://user-images.githubusercontent.com/17448534/201067825-f4e3226d-010a-4958-b1b5-a8085b9e8252.mp4
 
