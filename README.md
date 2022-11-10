@@ -14,3 +14,9 @@
 # Link
 * https://bakanano.github.io/random-MAL/
 
+
+
+
+
+https://user-images.githubusercontent.com/17448534/201067825-f4e3226d-010a-4958-b1b5-a8085b9e8252.mp4
+
